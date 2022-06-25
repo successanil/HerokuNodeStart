@@ -1,6 +1,7 @@
 var express = require('express')
 
 const mastRoute = require('./src/Routes/mastroute');
+const booksRoute = require('./src/Routes/booksroute')
 
 const mastController = require("./src/controller/mastcontroller")
 
@@ -22,6 +23,8 @@ app.get('/', (req, res) => {
 app.use('/getWeatherDataList', mastController.getWeatherDataList);
 // app.use('/m', mastRoute)
 app.use('/fetchTempretureForCity', mastController.fetchTempretureForCity)
+
+app.use('/books', booksRoute)
 
 
 
